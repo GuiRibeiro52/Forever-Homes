@@ -1,12 +1,13 @@
 /* AO LONGO DO ARQUIVO, COLOCAREI COMENTÁRIOS PARA ME AJUDAR A LOCALIZAR ITENS */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter',sans-serif;
+    font-family: 'Inter','poppins',sans-serif;
 }
 
 .flex {
@@ -121,13 +122,14 @@ h1.titulo{
 .topo-do-site p {
     font-size: 25px;
     color: #37383f;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+    line-height: 1.6;
 }
 
 .topo-do-site h2 {
     font-size: 30px;
     color: #1E1F27;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .topo-do-site .buttons {
@@ -161,10 +163,63 @@ h1.titulo{
 
 /* FIM DO TOPO DO SITE */
 
+/* INICIO CARROSSEL */
+
 .carrossel{
     background-color: #1e1f27;
     color: #fff;
 }
+
+/* FIM DO CARROSSEL */
+
+
+/* INICIO INFO ADOCAO */
+
+
+.info-adocao {
+    padding: 70px 8%;
+    text-align: left;
+    color: #1E1F27;
+}
+
+.info-adocao .titulo{
+    text-align: center;
+}
+
+.txt-adocao {
+    line-height: 3; 
+}
+
+.txt-adocao h2{
+    margin-top: 50px;
+}
+
+.txt-adocao ul{
+    margin-bottom: 30px;
+}
+
+.btn-adocao{
+    background-color: #1e1f27;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    gap: 20px;
+    margin-right: 10px;
+}
+
+.img-adocao{
+    scale: 0.8;
+}
+
+
+
+/* FIM INFO ADOCAO */
 
 .make-difference{
     background-color: #1e1f27;
