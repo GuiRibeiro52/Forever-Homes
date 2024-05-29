@@ -52,6 +52,7 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
+    border-bottom: 2px solid;
 }
 
 .header .logo {
@@ -177,8 +178,71 @@ body{
 /* INICIO CARROSSEL */
 
 .carrossel{
+    padding: 0px 8%;
+    padding-top: 70px;  
     background-color: #1e1f27;
     color: #fff;
+}
+
+.carrossel .interface .titulo{
+    text-align: center;
+    font-family: poppins;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 67.2px;
+    margin-bottom: 80px;
+}
+.container2{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container2 h1{
+    color: #f8db46;
+    font-family: poppins;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 76.8px;
+}
+
+.container2 p{
+    font-family: poppins;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 51.2px;
+}
+
+.carrossel .cards{
+    color: #fff;
+    width: 376px;
+    height: 355px;
+    padding: 36px 24px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    border-radius: 30px;    
+    border: 2px solid #fff;
+    text-align: left;
+}
+
+
+.carrossel .cards p{
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.carrossel .card-titulo{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.carrossel .card-titulo h2{
+    font-family: poppins;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 52.2px;
 }
 
 /* FIM DO CARROSSEL */
@@ -309,6 +373,8 @@ h1 span{
     font-family: poppins;
     font-weight: 700;
     font-size: 18px;
+    border: none;
+    cursor: pointer;
 }
 
 .btn-involved{
@@ -320,6 +386,7 @@ h1 span{
     font-family: poppins;
     font-weight: 700;
     font-size: 18px;
+    border: none;
 }
 
 .btn-monthly{
@@ -332,6 +399,7 @@ h1 span{
     font-family: poppins;
     font-weight: 700;
     font-size: 18px;
+    border: none;
 }
 
 .btn-learn{
@@ -344,6 +412,7 @@ h1 span{
     font-family: poppins;
     font-weight: 700;
     font-size: 18px;
+    border: none;
 }
 
 .btns{
@@ -364,6 +433,7 @@ h1 span{
     color: #1e1f27;
     background-color: #f8db46;
     border: none;
+    cursor: pointer;
 }
 
 .btn-view2{
@@ -379,9 +449,12 @@ h1 span{
     line-height: 28px;
     color: #fff;
     background-color: #1e1f27;
+    cursor: pointer;
 }
 
 /* FIM MAKE DIFFERENCE */
+
+/* INICIO SUBSCRIBE */
 
 .subscribe{
     padding: 50px;
@@ -434,7 +507,10 @@ h1 span{
 }
 
 .formulario input::placeholder{
-    color: white;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+    font-size: 20px;
+    font-family: poppins;
 }
 
 .btn-sub{
@@ -449,4 +525,87 @@ h1 span{
     font-weight: 700;
     font-size: 20px;
     line-height: 32px;
+    cursor: pointer;
 }
+
+
+/* FIM SUBSCRIBE */
+
+/* INICIO FOOOTER */
+
+footer{
+    padding: 0px 8%;
+    padding-top: 70px;    
+    color: #1e1f27;
+}
+
+footer .coluna1 .img1{
+    width: 100px;
+    height: 100px;
+}
+
+footer .coluna1 .img2{
+    width: 36px;
+    height: 36px;
+}
+
+footer .flex{
+    margin-bottom: 60px;
+    
+}
+
+footer .coluna1 h1{
+    font-family: poppins;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 19px;
+}
+
+footer .coluna1 p{
+    font-family: poppins;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px ;
+}
+
+footer .coluna2 p{
+    font-family: poppins;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px ;
+    margin-bottom: 16px;
+}
+
+footer .coluna2 .locate{
+    display: flex;
+    gap: 8px;
+}
+
+footer .icon-locate{
+    width: 24px;
+    height: 24px;
+}
+
+footer .h1-2{
+    padding-top: 60px;
+    text-align: center;
+    font-family: poppins;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 51.2px;
+    border-top: 2px solid;
+}
+
+.h1-2 span{
+    color: #FF3D9A;
+}
+
+footer .icon-socials{
+    display: flex;
+    width: 32px;
+    height: 32px;
+    gap: 20px;
+}
+
+/* FIM FOOTER */
