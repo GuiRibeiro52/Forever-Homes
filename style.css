@@ -348,6 +348,7 @@ h1 span{
 
 .btns{
     display: flex;
+    justify-content: center;
     gap: 24px;
 }
 .btn-view1{
@@ -362,6 +363,7 @@ h1 span{
     line-height: 28px;
     color: #1e1f27;
     background-color: #f8db46;
+    border: none;
 }
 
 .btn-view2{
@@ -393,4 +395,58 @@ h1 span{
 .subscribe input{
     justify-content: center;
     align-items: center;
+}
+
+.subscribe h1{
+    font-family: poppins;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 67.2px;
+    text-align: center;
+
+}
+
+.subscribe p{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+}
+
+.formulario {
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 40px;
+}
+
+.formulario input[type="text"] {
+    padding: 16px 24px;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    outline: none;
+    font-size: 16px;
+    width: 395px;
+    height: 64px;
+    margin-right: 10px;
+    background-color: #5758f1;
+    color: #fff;
+}
+
+.formulario input::placeholder{
+    color: white;
+}
+
+.btn-sub{
+    width: 170px;
+    height: 64px;
+    border-radius: 32px;
+    border: none;
+    padding: 16px 32px;
+    gap: 8px;
+    background-color: #fff;
+    font-family: poppins;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
 }
