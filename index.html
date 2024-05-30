@@ -46,7 +46,7 @@
 
                         <div class="buttons">
                             <button class="donate-btn"><img src="images/Shape.png" alt="heart">Donate</button>
-                            <button class="Apply-btn"><img src="images/Icon1.png" alt="dog">Apply to Adopt</button>
+                            <button id="btn-applyAdopt" class="Apply-btn"><img src="images/Icon1.png" alt="dog">Apply to Adopt</button>
                         </div>
                         
                     </div>
@@ -163,7 +163,7 @@
                             <li>Be ready to adopt within 7-10 days</li>
                         </ul>
 
-                        <button class="btn-adocao">Apply to Adopt</button>
+                        <button id="btn-applyAdopt" class="btn-adocao">Apply to Adopt</button>
                     </div>
                 </div>
             </div>
@@ -185,22 +185,22 @@
                     <div class="cards-2">
                         <h2>Adopt or Foster</h2>
                         <p>Provide a forever or temporary home to a homeless animal.</p>
-                        <button class="btn-adoptables">View Adoptables</button>
+                        <a href="adoptables.html" class="btn-adoptables">View Adoptables</a>
                     </div>
                     <div class="cards-2">
                         <h2>Volunteer</h2>
                         <p>We are always in need of passionate and friendly volunteers.</p>
-                        <button class="btn-involved">Get Involved</button>
+                        <a class="btn-involved">Get Involved</a>
                     </div>
                     <div class="cards-2">
                         <h2>Start a Fundraiser</h2>
                         <p>Start a fundraiser to raise funds and help us continue our mission.</p>
-                        <button class="btn-monthly">Give Monthly</button>
+                        <a class="btn-monthly">Give Monthly</a>
                     </div>
                     <div class="cards-2">
                         <h2>Adopt or Foster</h2>
                         <p>Provide a forever or temporary home to a homeless animal</p>
-                        <button class="btn-learn">Learn More</button>
+                        <a class="btn-learn">Learn More</a>
                     </div>
                 </div>
                 <div class="flex">
@@ -209,7 +209,7 @@
                         <h1>Find your <span>best friend</span> today</h1>
                         <h3>Browse our adorable adoptables</h3>
                         <div class="btns">
-                            <button class="btn-view1">View Adoptables</button>
+                            <button id="viewAdoptablesBtn" class="btn-view1">View Adoptables</button>
                             <button class="btn-view2">Apply to Adopt</button>
                         </div>
                         
@@ -289,5 +289,42 @@
         </div>
         <h1 class="h1-2">We are not just a rescue, <span>we are a refuge</span></h1>
     </footer>
+
+    <dialog>
+        <div class="modal-adopt">
+            <h1>Apply to Adopt</h1>
+            <p>Small text description can goes here</p>            
+            <form class="adopt-form">
+                <label class="label1" for="email">EMAIL*</label>
+                <input type="email" placeholder="Enter your email" required>
+                <label class="label1" for="name">FULL NAME*</label>
+                <input type="text" placeholder="Your name" required>
+                <label class="label1" for="date">DATE OF BIRTH*</label>
+                <div class="date-birth">
+                    <select name="day" id="day">
+                        <option class="opt" value="select">Day</option>
+                    </select>
+                    <select name="month" id="month">
+                        <option value="select">Month</option>
+                    </select>
+                    <select name="year" id="year">
+                        <option value="select">Year</option>
+                    </select>
+                </div>
+                <label class="chk-container">
+                    <input type="checkbox">
+                        I agree with <a href="#">Privacy Policy</a> and <a href="#">Terms of Conditions</a>  
+                </label>
+                <button class="btn-wanna">
+                    <img src="images/Icon8.png" alt="god">I wanna Adopt
+                </button>
+                <button id="btnCloseModal" class="btn-cancel">
+                    <img src="images/Vector.png" alt="god">Cancel
+                </button>
+            </form>
+       
+    </dialog>
+
+    <script src="script.js"></script>
 </body>
 </html>
