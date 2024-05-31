@@ -10,6 +10,7 @@ btnAdopt.forEach(button => {
     }
 })
 
+
 buttonClose.onclick = function(){
     modal.close()
     document.body.style.overflow = "auto"
@@ -29,18 +30,43 @@ window.onkeydown = function(e) {
     }
 }
 
-// PARA CHAMAR OUTRA PÁGINA HTML
+//SCRIPT DO CARROSSEL
 
-document.getElementById("viewAdoptablesBtn").onclick = function(){
-    window.location.href = "adoptables.html";
+const carousel = document.querySelector(".carousel")
+const arrowBtns = document.querySelectorAll(".wrapper .arrow")
+const firstCardWidth = carousel.querySelector(".card").offsetWidth;
+const carouselChildrens = [...carousel.children]
+
+
+let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth)
+
+carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
+    carousel.insertAdjacentHTML("afterbegin", card.outerHTML)
+})
+
+carouselChildrens.slice(0, cardPerView).forEach(card => {
+    carousel.insertAdjacentHTML("beforeend", card.outerHTML);
+});
+
+arrowBtns.forEach(btn =>{
+    btn.addEventListener("click",() =>{
+        carousel.scrollLeft += btn.id === "left" ?  -firstCardWidth : firstCardWidth
+    })
+})
+
+const infiniteScroll = () => {
+    if(carousel.scrollLeft === 0){
+        carousel.classList.add("no-transition")
+        carousel.scrollLeft = carousel.scrollWidth - ( 2 * carousel.offsetWidth)
+        carousel.classList.remove("no-transition")
+    }
+    else if(Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth){
+        carousel.classList.add("no-transition")
+        carousel.scrollLeft = carousel.offsetWidth
+        carousel.classList.remove("no-transition")
+    }
 }
 
-document.querySelectorAll("#btn-wanna").onclick = function(){
-    window.location.href = "sucess.html";
-}
+carousel.addEventListener("scroll", infiniteScroll)
 
-
-
-
-
-
+//FIM DO CARROSSEL
