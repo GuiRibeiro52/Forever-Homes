@@ -210,7 +210,7 @@
                         <h3>Browse our adorable adoptables</h3>
                         <div class="btns">
                             <button id="viewAdoptablesBtn" class="btn-view1">View Adoptables</button>
-                            <button class="btn-view2">Apply to Adopt</button>
+                            <button id="btn-applyAdopt" class="btn-view2">Apply to Adopt</button>
                         </div>
                         
 
@@ -232,7 +232,7 @@
                 <p>for updates on shelter events, fundraising parties, and heartwarming stories <br>of animals finding their forever homes.</p>
                 <form class="formulario" action="">
                     <input type="text" placeholder="Enter your email">
-                    <button class="btn-sub">Subscribe</button>
+                    <button id="btn-wanna" class="btn-sub">Subscribe</button>
                 </form>             
             </div>
         </section>
@@ -290,7 +290,7 @@
         <h1 class="h1-2">We are not just a rescue, <span>we are a refuge</span></h1>
     </footer>
 
-    <dialog>
+    <dialog class="dialog-adopt">
         <div class="modal-adopt">
             <h1>Apply to Adopt</h1>
             <p>Small text description can goes here</p>            
@@ -301,13 +301,13 @@
                 <input type="text" placeholder="Your name" required>
                 <label class="label1" for="date">DATE OF BIRTH*</label>
                 <div class="date-birth">
-                    <select name="day" id="day">
+                    <select name="day" id="day" required>
                         <option class="opt" value="select">Day</option>
                     </select>
-                    <select name="month" id="month">
+                    <select name="month" id="month" required>
                         <option value="select">Month</option>
                     </select>
-                    <select name="year" id="year">
+                    <select name="year" id="year" required>
                         <option value="select">Year</option>
                     </select>
                 </div>
@@ -315,7 +315,7 @@
                     <input type="checkbox">
                         I agree with <a href="#">Privacy Policy</a> and <a href="#">Terms of Conditions</a>  
                 </label>
-                <button class="btn-wanna">
+                <button id="btn-wanna" class="btn-wanna">
                     <img src="images/Icon8.png" alt="god">I wanna Adopt
                 </button>
                 <button id="btnCloseModal" class="btn-cancel">
@@ -325,6 +325,47 @@
        
     </dialog>
 
+    <dialog class="dialog-donate">
+        <div class="modal-donate">
+            <h1>Choose your <br>Donate</h1>
+            <form class="donate-form">
+                <label class="label1" for="email">EMAIL*</label>
+                <input type="email" placeholder="Enter your email" required>
+                <label class="label1" for="money">HOW MUCH CAN YOU HELP?*</label>
+                <input type="text" name="money" id="money" placeholder="R$ 0,00" required>
+                
+                <fieldset>
+                    <p class="method">PAYMENT METHOD*</p>
+                    <div class="payment-options">
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="pix">
+                            <span class="option-content">Pix</span>
+                        </label>
+                        <label class="payment-option1">
+                            <input type="radio" name="payment" value="credit-card">
+                            <span class="option-content">Credit <br>Card</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="paypal">
+                            <span class="option-content">Paypal</span>
+                        </label>
+                    </fieldset>
+
+                        <div class="buttons-donate">
+                            <button id="btn-wanna" class="btn-wanna-help">
+                            <img src="images/Shape.png" alt="god">I wanna Help!
+                            </button>
+                            <button id="btnCloseModal" class="btn-cancel2">
+                            <img src="images/Vector.png" alt="god">Cancel
+                            </button>
+                        </div>                
+                </div>
+            </form>
+
+        </div>
+    </dialog>
+
+    
     <script src="script.js"></script>
 </body>
 </html>

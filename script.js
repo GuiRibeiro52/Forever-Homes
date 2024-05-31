@@ -1,11 +1,14 @@
-const button = document.getElementById("btn-applyAdopt")
+const btnAdopt = document.querySelectorAll("#btn-applyAdopt")
 const modal = document.querySelector("dialog")
 const buttonClose = document.getElementById("btnCloseModal")
 
-button.onclick = function(){
-    modal.showModal()
-    document.body.style.overflow = "hidden"
-}
+
+btnAdopt.forEach(button => {
+    button.onclick = function() {
+        modal.showModal()
+        document.body.style.overflow = "hidden"
+    }
+})
 
 buttonClose.onclick = function(){
     modal.close()
@@ -31,3 +34,13 @@ window.onkeydown = function(e) {
 document.getElementById("viewAdoptablesBtn").onclick = function(){
     window.location.href = "adoptables.html";
 }
+
+document.querySelectorAll("#btn-wanna").onclick = function(){
+    window.location.href = "sucess.html";
+}
+
+
+
+
+
+
