@@ -136,7 +136,7 @@
             <h1>Choose your <br>Donate</h1>
             <form class="donate-form">
                 <label class="label1" for="email">EMAIL*</label>
-                <input type="email" placeholder="Enter your email" required>
+                <input type="email" id="donate-email" placeholder="Enter your email" required>
                 <label class="label1" for="money">HOW MUCH CAN YOU HELP?*</label>
                 <input type="text" name="money" id="money" placeholder="R$ 0,00" required>
                 
@@ -144,22 +144,22 @@
                     <p class="method">PAYMENT METHOD*</p>
                     <div class="payment-options">
                         <label class="payment-option">
-                            <input type="radio" name="payment" value="pix">
+                            <input type="radio" name="payment" value="pix" required>
                             <span class="option-content">Pix</span>
                         </label>
                         <label class="payment-option1">
-                            <input type="radio" name="payment" value="credit-card">
+                            <input type="radio" name="payment" value="credit-card" required>
                             <span class="option-content">Credit <br>Card</span>
                         </label>
                         <label class="payment-option">
-                            <input type="radio" name="payment" value="paypal">
+                            <input type="radio" name="payment" value="paypal" required>
                             <span class="option-content">Paypal</span>
                         </label>
                     </div>
                 </fieldset>
 
                         <div class="buttons-donate">
-                            <button id="btn-wanna" class="btn-wanna-help">
+                            <button id="btn-wanna-help" class="btn-wanna-help">
                             <img src="images/Shape.png" alt="god">I wanna Help!
                             </button>
                             <button id="btnCloseModalDonate" class="btn-cancel2">
