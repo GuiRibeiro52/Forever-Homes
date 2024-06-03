@@ -1,36 +1,79 @@
-const btnAdopt = document.querySelectorAll("#btn-applyAdopt")
-const modal = document.querySelector("dialog")
-const buttonClose = document.getElementById("btnCloseModal")
 
+////////////SCRIPT MODAL ADOÇÃO
 
-btnAdopt.forEach(button => {
-    button.onclick = function() {
-        modal.showModal()
-        document.body.style.overflow = "hidden"
-    }
-})
+const btnAdopt = document.querySelectorAll("#btn-applyAdopt");
+const modalAdopt = document.getElementById("adopt-mod");
+const buttonCloseAdopt = document.getElementById("btnCloseModal");
 
+if (btnAdopt && modalAdopt && buttonCloseAdopt) {
+    btnAdopt.forEach(button => {
+        button.onclick = function() {
+            modalAdopt.showModal();
+            document.body.style.overflow = "hidden";
+        }
+    });
 
-buttonClose.onclick = function(){
-    modal.close()
-    document.body.style.overflow = "auto"
+    buttonCloseAdopt.onclick = function() {
+        modalAdopt.close();
+        document.body.style.overflow = "auto";
+    };
+
+    window.onclick = function(e) {
+        if (e.target == modalAdopt) {
+            modalAdopt.close();
+            document.body.style.overflow = "auto"; 
+        }
+    };
+
+    window.onkeydown = function(e) {
+        if (e.key === "Escape") {
+            modalAdopt.close();
+            document.body.style.overflow = "auto"; 
+        }
+    };
 }
 
-window.onclick = function(e) {
-    if (e.target == modal) {
-        modal.close();
-        document.body.style.overflow = "auto"; 
-    }
+
+/////////////FIM DO MODAL ADOÇÃO
+
+/////////////SCRIPT MODAL DOAÇÃO
+const btnDonate = document.querySelectorAll("#btn-donate");
+const modalDonate = document.getElementById("donate-mod");
+const buttonCloseDonate = document.getElementById("btnCloseModalDonate");
+
+if (btnDonate && modalDonate && buttonCloseDonate) {
+    btnDonate.forEach(button => {
+        button.onclick = function() {
+            modalDonate.showModal();
+            document.body.style.overflow = "hidden";
+        }
+    });
+
+    buttonCloseDonate.onclick = function() {
+        modalDonate.close();
+        document.body.style.overflow = "auto";
+    };
+
+    window.onclick = function(e) {
+        if (e.target == modalDonate) {
+            modalDonate.close();
+            document.body.style.overflow = "auto"; 
+        }
+    };
+
+    window.onkeydown = function(e) {
+        if (e.key === "Escape") {
+            modalDonate.close();
+            document.body.style.overflow = "auto"; 
+        }
+    };
 }
 
-window.onkeydown = function(e) {
-    if (e.key === "Escape") {
-        modal.close();
-        document.body.style.overflow = "auto"; 
-    }
-}
 
-//SCRIPT DO CARROSSEL
+//////////////FIM DO MODAL DOAÇÃO
+
+
+///////////////SCRIPT DO CARROSSEL
 
 const carousel = document.querySelector(".carousel")
 const arrowBtns = document.querySelectorAll(".wrapper .arrow")
@@ -69,4 +112,4 @@ const infiniteScroll = () => {
 
 carousel.addEventListener("scroll", infiniteScroll)
 
-//FIM DO CARROSSEL
+//////////////////FIM DO CARROSSEL

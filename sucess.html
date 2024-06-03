@@ -21,12 +21,12 @@
         
         <div class="contact">
             <a href="#"><img src="images/Icon.png" alt="Tel icon">631-249-7325</a>
-            <button class="donate-btn"><img src="images/Shape.png" alt="heart">Donate</button>
+            <button id="btn-donate" class="donate-btn"><img src="images/Shape.png" alt="heart">Donate</button>
         </div>
     </header>
 
     <main>
-        <section class="sucess">
+        <section class="success">
             <div class="container">
                 <a class="btn-back" href="index.html"> <img src="images/Vector.png" alt="back">Back</a>
                 <h1>Success!</h1>
@@ -36,6 +36,45 @@
 
     </main>
 
+    <dialog id="donate-mod" class="dialog-donate" open>
+        <div class="modal-donate">
+            <h1>Choose your <br>Donate</h1>
+            <form class="donate-form">
+                <label class="label1" for="email">EMAIL*</label>
+                <input type="email" placeholder="Enter your email" required>
+                <label class="label1" for="money">HOW MUCH CAN YOU HELP?*</label>
+                <input type="text" name="money" id="money" placeholder="R$ 0,00" required>
+                
+                <fieldset>
+                    <p class="method">PAYMENT METHOD*</p>
+                    <div class="payment-options">
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="pix">
+                            <span class="option-content">Pix</span>
+                        </label>
+                        <label class="payment-option1">
+                            <input type="radio" name="payment" value="credit-card">
+                            <span class="option-content">Credit <br>Card</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="paypal">
+                            <span class="option-content">Paypal</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                        <div class="buttons-donate">
+                            <button id="btn-wanna" class="btn-wanna-help">
+                            <img src="images/Shape.png" alt="god">I wanna Help!
+                            </button>
+                            <button id="btnCloseModalDonate" class="btn-cancel2">
+                            <img src="images/Vector.png" alt="god">Cancel
+                            </button>
+                        </div>                
+            </form>
+
+        </div>
+    </dialog>
 
     <script src="script.js"></script>
 </body>
