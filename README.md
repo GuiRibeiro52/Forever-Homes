@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # Forever Homes - Ajuda a Salvar Vidas
 
 ## Visão Geral
