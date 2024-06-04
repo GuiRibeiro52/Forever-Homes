@@ -3,7 +3,23 @@ document.addEventListener("DOMContentLoaded", function() {
     setupDonateModal();
     populateDateFields();
     addDateFieldListeners();
+    formatMoneyInput(); 
 });
+
+function formatMoneyInput() {
+    const moneyInput = document.getElementById("donate-money");
+
+    if (moneyInput) {
+        moneyInput.addEventListener("input", function(event) {
+            let value = event.target.value;
+            value = value.replace(/\D/g, ''); 
+            value = (value / 100).toFixed(2); 
+            value = value.replace(".", ","); 
+            value = "R$ " + value.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+            event.target.value = value;
+        });
+    }
+}
 
 ////////////SCRIPT MODAL ADOÇÃO
 
@@ -40,7 +56,7 @@ function setupAdoptModal() {
         };
     }
 
-  
+   
     const submitButton = document.getElementById("btn-wanna");
     if (submitButton) {
         enableAdoptSubmitButton();
@@ -163,7 +179,7 @@ function enableDonateSubmitButton() {
 function validateDonateForm() {
     let isValid = true;
     const emailField = document.getElementById("donate-email");
-    const amountField = document.getElementById("money");
+    const amountField = document.getElementById("donate-money"); 
     const paymentMethods = document.getElementsByName("payment");
 
     resetErrors();
@@ -173,18 +189,20 @@ function validateDonateForm() {
         isValid = false;
     }
 
-    if (!validateAmount(amountField.value.trim())) {
-        showError(amountField, "Please enter a valid donation amount.");
-        isValid = false;
-    }
-
-    if (![...paymentMethods].some(payment => payment.checked)) {
-        showError(document.querySelector('.method'), "Please select a payment method.");
-        isValid = false;
-    }
-
-    return isValid;
-}
+     
+     const amount = parseFloat(amountField.value.replace(/[^0-9,]+/g, '').replace(',', '.'));
+     if (isNaN(amount) || amount <= 0) { 
+         showError(amountField, "Please enter a valid donation amount.");
+         isValid = false;
+     }
+ 
+     if (![...paymentMethods].some(payment => payment.checked)) {
+         showError(document.querySelector('.method'), "Please select a payment method.");
+         isValid = false;
+     }
+ 
+     return isValid;
+ }
 
 //////////////FIM DO MODAL DOAÇÃO
 

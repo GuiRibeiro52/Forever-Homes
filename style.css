@@ -1009,10 +1009,10 @@ fieldset{
     border: none;
 }
 
-.payment-option input[type="radio"]:checked + .option-content, 
+/* .payment-option input[type="radio"]:checked + .option-content, 
 .payment-option1 input[type="radio"]:checked + .option-content {
-    color: #ffffff; 
-}
+    color: #ffffff;
+} */
 
 .option-content{
     font-family: poppins;
@@ -1021,3 +1021,4 @@ fieldset{
 }
 
 /* FIM DO DONATE MODAL */
+
