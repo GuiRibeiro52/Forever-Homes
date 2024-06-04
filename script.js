@@ -77,7 +77,7 @@ function enableAdoptSubmitButton() {
     form.addEventListener("submit", function(event) {
         event.preventDefault();
         if (validateAdoptForm()) {
-            window.location.href = "sucess.html";
+            window.location.href = "formularioRecebido.html";
         }
     });
 
@@ -171,7 +171,7 @@ function enableDonateSubmitButton() {
     form.addEventListener("submit", function(event) {
         event.preventDefault();
         if (validateDonateForm()) {
-            window.location.href = "sucess.html";
+            window.location.href = "donateRecebida.html";
         }
     });
 }
