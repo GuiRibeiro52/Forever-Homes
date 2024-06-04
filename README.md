@@ -104,8 +104,7 @@ Olá, eu sou Guilherme Ribeiro. Estudante e futuro desenvolvedor apaixonado por 
 ## 🛠 Habilidades
 Javascript, HTML, CSS...
 
-=======
-Executando o Projeto
+## Executando o Projeto
 
 1. Clone o repositório para sua máquina local.
 2. Abra o `index.html` no seu navegador web para iniciar a aplicação.
